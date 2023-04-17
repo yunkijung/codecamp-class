@@ -33,6 +33,7 @@ export default function Qqq(){
         name: string
         age: number | string
         school: string
+        hobby?: string
     }
 
     const profile: IProfile = {
@@ -40,6 +41,8 @@ export default function Qqq(){
         age: 8,
         school: "Richmon hill high school"
     }
+
+    profile.hobby = "football";
 
     profile.age = "8 years old";
 
