@@ -14,7 +14,7 @@ export interface IBoardWriteUIProps {
     onChangeContents: (event: ChangeEvent<HTMLInputElement>) => void
     mycolor: boolean
     isEdit: boolean
-    data: Pick<IQuery, "fetchBoard">
+    data?: Pick<IQuery, "fetchBoard">
 }
 
 export interface IBlueButtonProps {
