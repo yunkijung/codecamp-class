@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>This</title>
+    <script>
+      class Counter {
+        count = 10;
+
+        // 1. Arrow function
+        // onClickButton = () => {
+        //   console.log("Current Count: ", this.count);
+        // };
+
+        onClickButton() {
+          console.log("Current Count: ", this.count);
+        }
+
+        render() {
+          const button = document.createElement("button");
+          button.count = 100;
+          button.innerText = "Click Here";
+          button.addEventListener("click", this.onClickButton.bind(this)); // 2. Binding this
+          document.body.appendChild(button);
+        }
+      }
+      window.onload = function () {
+        const counter = new Counter();
+        counter.render();
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
